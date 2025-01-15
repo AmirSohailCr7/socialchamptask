@@ -1,0 +1,50 @@
+// Address model
+import 'package:socialchamptask/network/data/models/users/geo_response.dart';
+import 'package:socialchamptask/network/domain/entities/users/address_entity.dart';
+
+class Address {
+  final String street;
+  final String suite;
+  final String city;
+  final String zipcode;
+  final Geo geo;
+
+  Address({
+    required this.street,
+    required this.suite,
+    required this.city,
+    required this.zipcode,
+    required this.geo,
+  });
+
+  factory Address.fromJson(Map<String, dynamic> json) {
+    return Address(
+      street: json['street'],
+      suite: json['suite'],
+      city: json['city'],
+      zipcode: json['zipcode'],
+      geo: Geo.fromJson(json['geo']),
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'street': street,
+      'suite': suite,
+      'city': city,
+      'zipcode': zipcode,
+      'geo': geo.toJson(),
+    };
+  }
+
+  // Convert Address model to AddressEntity
+  AddressEntity toEntity() {
+    return AddressEntity(
+      street: street,
+      suite: suite,
+      city: city,
+      zipcode: zipcode,
+      geo: geo.toEntity(),
+    );
+  }
+}
