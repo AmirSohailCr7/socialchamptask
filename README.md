@@ -17,6 +17,20 @@ This project implements a user list with functionalities such as:
    - Add new users via a dedicated `AddUserPage`.
    - Delete users from both the main user list and search results.
 
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/1d963398-3901-42ec-8215-c5b13bdba281" alt="splash" width="200"/>
+    </td>
+    <td style="padding-left: 20px;">
+      <img src="https://github.com/user-attachments/assets/b5b7f7eb-465c-460d-bc36-6f36143c4b53" alt="login-screen" width="200"/>
+    </td>
+      <td style="padding-left: 20px;">
+      <img src="https://github.com/user-attachments/assets/1c8b5e47-8a31-4c5e-9600-79c16e0ea254" alt="login-screen" width="200"/>
+    </td>
+  </tr>
+</table>
+
 #### 2. **Search Functionality**
    - Real-time search capability to filter users by name, phone, or ID.
    - Utilizes `UserSearchCubit` to manage search results independently of the main user list.
